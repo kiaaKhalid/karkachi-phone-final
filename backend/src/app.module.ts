@@ -81,8 +81,8 @@ const ALL_ENTITIES = [
             type: 'mysql',
             url: databaseUrl,
             entities: ALL_ENTITIES,
-            // Never use synchronize in production — use migrations
-            synchronize: false,
+            // Allow forced sync in production using DB_SYNC var
+            synchronize: process.env.DB_SYNC === 'true' || false,
             logging: false,
             // Heroku Postgres requires SSL
             ssl: { rejectUnauthorized: false },
