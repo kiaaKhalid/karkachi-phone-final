@@ -71,8 +71,24 @@ export class SeederService implements OnApplicationBootstrap {
 
   private async seedUsers() {
     const salt = await bcrypt.genSalt(10);
+    const passwordSuperAdmin = await bcrypt.hash('super@#ADMIN$$2026', salt);
     const passwordAdmin = await bcrypt.hash('admin123', salt);
     const passwordClient = await bcrypt.hash('client123', salt);
+
+    let superAdmin = await this.userRepository.findOne({ where: { email: 'super@admin.com' } });
+    if (!superAdmin) {
+      superAdmin = this.userRepository.create({
+        email: 'super@admin.com',
+        password: passwordSuperAdmin,
+        name: 'super admin',
+        role: UserRole.SUPER_ADMIN,
+        address: 'marrakech',
+        authProvider: AuthProvider.LOCAL,
+        isEmailVerified: true,
+        isActive: true,
+      });
+      await this.userRepository.save(superAdmin);
+    }
 
     let admin = await this.userRepository.findOne({ where: { email: 'admin@shop.com' } });
     if (!admin) {
