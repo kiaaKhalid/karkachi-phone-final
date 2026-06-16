@@ -41,7 +41,7 @@ const hotspots = [
     rating: "5.0 (210)",
     top: "94%",
     left: "5%",
-    image: "https://images.unsplash.com/photo-1517336712461-70179aa7b188?q=80&w=2067&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2067&auto=format&fit=crop"
   }
 ]
 
@@ -169,7 +169,7 @@ export default function ProductShowcase() {
           </div>
 
           {/* Column 2: Specific Product Card (Reduced width to Span 3) */}
-          <div className="lg:col-span-3 h-full flex flex-col group/gallery-container">
+          <div className="lg:col-span-3 h-[300px] md:h-[400px] lg:h-full flex flex-col group/gallery-container">
             <div 
               key={activeProduct.id}
               className="relative flex-1 rounded-[3rem] bg-[#F7F7F8] dark:bg-[#121215] overflow-hidden animate-in fade-in slide-in-from-right-10 duration-700 flex flex-col shadow-sm shadow-black/5"
@@ -181,12 +181,12 @@ export default function ProductShowcase() {
               </div>
 
               {/* Product Image Display */}
-              <div className="flex-1 relative w-full h-full p-8 lg:p-14 flex items-center justify-center">
+              <div className="absolute inset-0 w-full h-full">
                  <Image
                   src={activeProduct.image}
                   alt={activeProduct.title}
                   fill
-                  className="object-contain p-4 md:p-10 transform transition-transform duration-1000 group-hover/gallery-container:scale-105"
+                  className="object-cover transform transition-transform duration-1000 group-hover/gallery-container:scale-105"
                   priority
                 />
               </div>

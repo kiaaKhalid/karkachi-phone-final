@@ -39,7 +39,7 @@ export default function Navbar() {
   const router = useRouter()
   const { isAuthenticated } = useAuth()
   const { totalItems } = useCart()
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => { setMounted(true) }, [])
@@ -261,8 +261,8 @@ export default function Navbar() {
 
             {/* Actions : Icônes réduites (w-6 au lieu de w-9) */}
             <nav className="flex items-center gap-1 md:gap-3 lg:gap-5">
-              <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="p-1.5 lg:p-2 xl:p-2.5 xxl:p-3 rounded-full hover:bg-secondary transition-colors">
-                {mounted && (theme === "dark" ? <Sun className="w-5 h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 xxl:h-10 xxl:w-10" /> : <Moon className="w-5 h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 xxl:h-10 xxl:w-10" />)}
+              <button onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} className="p-1.5 lg:p-2 xl:p-2.5 xxl:p-3 rounded-full hover:bg-secondary transition-colors">
+                {mounted && (resolvedTheme === "dark" ? <Sun className="w-5 h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 xxl:h-10 xxl:w-10" /> : <Moon className="w-5 h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 xxl:h-10 xxl:w-10" />)}
               </button>
 
               <Link href="/wishlist" className="p-1.5 lg:p-2 xl:p-2.5 xxl:p-3 rounded-full hover:bg-secondary transition-colors hidden sm:block">

@@ -24,12 +24,28 @@ export default function AudioImmersionSection() {
         </div>
 
         {/* Features Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end pb-0">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-end pb-0">
+          
+          {/* Mobile Icons Row (Visible only on mobile) */}
+          <div className="flex lg:hidden flex-row justify-center gap-4 sm:gap-6 w-full order-1 z-20 relative px-4 mt-2 mb-4">
+            <div className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300">
+              <AudioLines className="w-5 h-5" />
+            </div>
+            <div className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300">
+              <BatteryCharging className="w-5 h-5" />
+            </div>
+            <div className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300">
+              <Mic className="w-5 h-5" />
+            </div>
+            <div className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300">
+              <Bluetooth className="w-5 h-5" />
+            </div>
+          </div>
           
           {/* Left Features */}
-          <div className="lg:col-span-3 flex flex-col gap-16 lg:gap-24 order-2 lg:order-1 px-4 lg:px-0 mb-16 lg:mb-32">
+          <div className="hidden lg:flex lg:col-span-3 flex-col gap-16 lg:gap-24 order-2 lg:order-1 px-4 lg:px-0 mb-16 lg:mb-32">
             <div className="flex flex-col items-center lg:items-end text-center lg:text-right space-y-5 group">
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/50 dark:from-white/10 dark:to-white/5 border border-slate-200/50 dark:border-white/10 shadow-sm text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
+              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
                 <AudioLines className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
@@ -38,7 +54,7 @@ export default function AudioImmersionSection() {
             </div>
 
             <div className="flex flex-col items-center lg:items-end text-center lg:text-right space-y-5 group">
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/50 dark:from-white/10 dark:to-white/5 border border-slate-200/50 dark:border-white/10 shadow-sm text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
+              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
                 <BatteryCharging className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
@@ -48,8 +64,8 @@ export default function AudioImmersionSection() {
           </div>
 
           {/* Center Image */}
-          <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center items-end relative h-full mt-10 lg:mt-0">
-            <div className="relative w-full max-w-[500px] lg:max-w-[700px] xl:max-w-[900px] aspect-square flex items-end justify-center scale-[1.4] lg:scale-[1.6] xl:scale-[1.8] origin-bottom pointer-events-none">
+          <div className="lg:col-span-6 order-2 lg:order-2 flex justify-center items-end relative w-full lg:h-full mt-4 lg:mt-0">
+            <div className="relative w-full max-w-[500px] lg:max-w-[700px] xl:max-w-[900px] aspect-[4/3] sm:aspect-[3/2] lg:aspect-square flex items-end justify-center scale-[1.8] sm:scale-[1.5] lg:scale-[1.6] xl:scale-[1.8] origin-bottom pointer-events-none">
               
               {/* Perfect Circle Glow - Light Mode Only */}
               <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square rounded-full bg-orange-400/20 opacity-100 dark:opacity-0 pointer-events-none blur-[60px] md:blur-[100px] transition-opacity duration-500" />
@@ -72,9 +88,9 @@ export default function AudioImmersionSection() {
           </div>
 
           {/* Right Features */}
-          <div className="lg:col-span-3 flex flex-col gap-16 lg:gap-24 order-3 px-4 lg:px-0 mb-16 lg:mb-32">
+          <div className="hidden lg:flex lg:col-span-3 flex-col gap-16 lg:gap-24 order-3 px-4 lg:px-0 mb-16 lg:mb-32">
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 group">
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/50 dark:from-white/10 dark:to-white/5 border border-slate-200/50 dark:border-white/10 shadow-sm text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
+              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
                 <Mic className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
@@ -83,7 +99,7 @@ export default function AudioImmersionSection() {
             </div>
 
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 group">
-              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/50 dark:from-white/10 dark:to-white/5 border border-slate-200/50 dark:border-white/10 shadow-sm text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
+              <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-lg text-slate-700 dark:text-slate-300 group-hover:border-orange-500/50 group-hover:text-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300">
                 <Bluetooth className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">

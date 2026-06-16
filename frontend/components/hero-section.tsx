@@ -84,10 +84,10 @@ export default function HeroSection() {
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-0 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 z-0 pointer-events-none" />
 
-            <div className="relative z-20 flex flex-col items-start justify-center h-full w-full px-6 sm:px-12 lg:px-20 xl:px-32">
+            <div className="relative z-20 flex flex-col items-start justify-end sm:justify-center h-full w-full px-6 sm:px-12 lg:px-20 xl:px-32 pb-24 sm:pb-0">
               
               {/* Contenu textuel */}
-              <div className="w-full sm:w-[60%] lg:w-[45%] xl:w-[40%] space-y-4 sm:space-y-6 lg:space-y-8 text-center sm:text-left animate-fade-in-up mt-[-25%] sm:mt-0 relative z-20 mr-auto">
+              <div className="w-full sm:w-[60%] lg:w-[45%] xl:w-[40%] space-y-4 sm:space-y-6 lg:space-y-8 text-center sm:text-left animate-fade-in-up relative z-20 mr-auto mb-12 sm:mb-0">
                 <div className="inline-flex items-center self-center sm:self-start gap-2 px-4 py-2 rounded-full bg-black/5 dark:bg-white/10 text-slate-900 dark:text-white backdrop-blur-sm border border-black/5 dark:border-white/10 text-xs sm:text-sm font-medium">
                   <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
                   {" Nouveauté Apple"}
@@ -115,14 +115,14 @@ export default function HeroSection() {
             </div>
 
             {/* Image Apple (Fixe) - Positionnée du top au bottom à droite */}
-            <div className="absolute bottom-0 sm:top-0 right-0 w-full sm:w-[80%] lg:w-[65%] h-[50%] sm:h-full z-10 pointer-events-none">
+            <div className="absolute top-0 right-0 w-full lg:w-[65%] h-[55%] sm:h-full z-10 pointer-events-none">
               <Image 
                 src="/images/bannier-apple.webp" 
                 alt="Collection Apple" 
                 fill 
                 priority
-                className="object-contain object-bottom sm:object-cover sm:object-right drop-shadow-2xl"
-                sizes="(max-w-640px) 100vw, (max-w-1024px) 80vw, 65vw"
+                className="object-contain object-top sm:object-cover sm:object-right lg:object-left drop-shadow-2xl"
+                sizes="(max-w-640px) 100vw, (max-w-1024px) 100vw, 65vw"
               />
             </div>
           </div>
