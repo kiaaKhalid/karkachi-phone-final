@@ -114,7 +114,7 @@ export default function ProductShowcase() {
           {/* Column 1: Interactive Image Container (Increased width to Span 9) */}
           <div className="lg:col-span-9 relative h-[450px] md:h-[600px] lg:h-[680px] rounded-[3rem] overflow-hidden shadow-sm shadow-black/5 group/container">
             <Image
-              src="/images/presentation-des-produits.png"
+              src="/images/presentation-des-produits.webp"
               alt="Adoptez le look"
               fill
               className="object-cover transition-all duration-1000" // NO ZOOM as per feedback

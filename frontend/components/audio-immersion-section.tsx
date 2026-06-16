@@ -63,7 +63,7 @@ export default function AudioImmersionSection() {
 
               {/* The Image (Assumes a transparent background PNG) */}
               <Image 
-                src="/images/headphone-immersion.png" 
+                src="/images/headphone-immersion.webp" 
                 alt="Immersion Audio" 
                 fill 
                 className="object-contain object-bottom z-10 drop-shadow-[0_20px_50px_rgba(249,115,22,0.1)] dark:drop-shadow-[0_20px_50px_rgba(255,165,0,0.15)] transition-all duration-700 hover:scale-105"

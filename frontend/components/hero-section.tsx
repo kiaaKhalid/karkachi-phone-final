@@ -117,7 +117,7 @@ export default function HeroSection() {
             {/* Image Apple (Fixe) - Positionnée du top au bottom à droite */}
             <div className="absolute bottom-0 sm:top-0 right-0 w-full sm:w-[80%] lg:w-[65%] h-[50%] sm:h-full z-10 pointer-events-none">
               <Image 
-                src="/images/bannier-apple.png" 
+                src="/images/bannier-apple.webp" 
                 alt="Collection Apple" 
                 fill 
                 priority
