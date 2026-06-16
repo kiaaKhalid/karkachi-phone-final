@@ -16,10 +16,10 @@ export default function AudioImmersionSection() {
         {/* Title Section */}
         <div className="text-center mb-16 md:mb-20 space-y-4">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Pure <span className="text-slate-400 dark:text-slate-500">Immersion</span>
+            Immersion <span className="text-slate-400 dark:text-slate-500">Pure</span>
           </h2>
           <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
-            Immerse in rich, balanced audio with zero distractions and seamless design.
+            Plongez dans un son riche et équilibré avec zéro distraction et un design épuré.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function AudioImmersionSection() {
                 <AudioLines className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
-                Focus on what matters with adaptive ANC.
+                Concentrez-vous sur l'essentiel avec la réduction de bruit active.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export default function AudioImmersionSection() {
                 <BatteryCharging className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
-                Enjoy music, calls, and podcasts all day.
+                Profitez de votre musique, de vos appels et de vos podcasts toute la journée.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function AudioImmersionSection() {
               {/* The Image (Assumes a transparent background PNG) */}
               <Image 
                 src="/images/headphone-immersion.png" 
-                alt="Audio Immersion" 
+                alt="Immersion Audio" 
                 fill 
                 className="object-contain object-bottom z-10 drop-shadow-[0_20px_50px_rgba(249,115,22,0.1)] dark:drop-shadow-[0_20px_50px_rgba(255,165,0,0.15)] transition-all duration-700 hover:scale-105"
               />
@@ -78,7 +78,7 @@ export default function AudioImmersionSection() {
                 <Mic className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
-                Beamforming mics and noise suppression ensure your voice is clear, even in noise.
+                Les micros à formation de faisceaux et la suppression du bruit garantissent la clarté de votre voix.
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function AudioImmersionSection() {
                 <Bluetooth className="w-6 h-6" />
               </div>
               <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-[250px]">
-                Instant pairing and stable Bluetooth 5.3 for lag-free audio.
+                Appairage instantané et Bluetooth 5.3 stable pour un son sans décalage.
               </p>
             </div>
           </div>
