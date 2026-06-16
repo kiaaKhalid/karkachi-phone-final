@@ -1,0 +1,52 @@
+{
+  "name": "karkachi-phone-api",
+  "description": "Karkachi Phone — NestJS REST API",
+  "repository": "https://github.com/YOUR_USERNAME/YOUR_REPO",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["nestjs", "typescript", "postgresql", "typeorm"],
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0",
+      "options": {
+        "version": "16"
+      }
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Application environment",
+      "value": "production"
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT access tokens",
+      "generator": "secret"
+    },
+    "JWT_EXPIRES_IN": {
+      "description": "JWT access token expiry",
+      "value": "1d"
+    },
+    "JWT_REFRESH_SECRET": {
+      "description": "Secret key for JWT refresh tokens",
+      "generator": "secret"
+    },
+    "JWT_REFRESH_EXPIRES_IN": {
+      "description": "JWT refresh token expiry",
+      "value": "7d"
+    },
+    "CORS_ORIGIN": {
+      "description": "Allowed frontend origin (e.g. https://your-app.vercel.app)",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
